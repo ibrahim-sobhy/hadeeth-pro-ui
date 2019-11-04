@@ -1,0 +1,47 @@
+@import '../../scss/functions.scss';
+@import '../../scss/mixins.scss';
+
+.searching {
+    
+    & label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__input {
+        margin-right: .5rem;
+        padding: 0;
+        height: 3rem;
+        width: 0;
+        border-radius: .5rem;
+        border: none;
+        outline: none;
+
+        transition: all 1s;
+
+        &::placeholder {
+            opacity: 0;
+            transition: inherit;
+        }
+    }
+
+    &__btn {
+        @include dark-btn;
+    }
+
+    & input[type=checkbox] {
+        display: none;
+    }
+
+    & input[type=checkbox]:checked ~ &__input {
+        width: 20rem;
+        padding: .5rem;
+        border: border();
+        
+    }
+
+    & input[type=checkbox]:checked ~ &__input::placeholder {
+        opacity: 50%;
+    }
+}

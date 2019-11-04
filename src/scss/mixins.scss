@@ -1,0 +1,44 @@
+@mixin dark-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 3rem;
+    height: 3rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+
+    box-shadow: 0 0 .6rem 5px $color-gray-dark;
+    background-color: $color-main-dark;
+    color: $color-white;
+
+    font-size: xx-large;
+
+    &:hover {
+        border: 1px solid $color-secondary-light;
+    }
+}
+
+@mixin submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    width: 10rem;
+    height: 3rem;
+    margin: .5rem 0;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    outline: none;
+
+    box-shadow: 0 0 .6rem 5px $color-gray-dark;
+    background-color: $color-main-dark;
+    color: $color-white;
+
+    font-size: large;
+
+    &:hover {
+        border: 1px solid $color-secondary-light;
+        cursor: pointer;
+    }
+}

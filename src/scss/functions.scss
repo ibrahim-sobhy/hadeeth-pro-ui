@@ -1,0 +1,5 @@
+@import './colors.scss';
+
+@function border() {
+    @return 1px solid $color-gray-dark;
+}

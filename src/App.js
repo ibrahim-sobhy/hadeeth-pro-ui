@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Nav from './components/navigation/navigation';
+import Search from './components/searching/searching';
+import { BrowserRouter as Router } from "react-router-dom";
+import MainPanel from './components/main/main-panel';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const routing = (
+    <Router>
+      <div className="app">
+        <div className="app__nav">
+          <Nav />
+        </div>
+        <section className="app__main">
+          <div className="app__header">
+            <Search />
+          </div>
+          <div className="app__main--panel">
+            <MainPanel />
+          </div>
+        </section>
+      </div>
+    </Router>
   );
+  return routing;
 }
 
 export default App;
