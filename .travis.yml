@@ -10,7 +10,6 @@
 # deploy
 # after_deploy
 # after_script
-
 language: node_js
 node_js:
   - node
@@ -21,6 +20,9 @@ script:
 
 deploy:
   provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  region: $AWS_DEFAULT_REGION
   bucket: "hadeeth-pro-ui"
   skip_cleanup: true
   local_dir: build
